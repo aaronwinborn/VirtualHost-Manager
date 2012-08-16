@@ -154,7 +154,6 @@ function new_vhost( $nome = NULL ) {
 	 */
 	$htmIndex = $vhPath . '/index.php';
 	if (!file_exists($htmIndex)) {
-		file_put_contents( $htmIndex , '<h1>Virtual Host criado com VHM !!!</h1>' );
 		file_put_contents( $htmIndex , '<h1>Welcome to ' . $nome . '! (Courtesy of ~/bin/VirtualHost-Manager)</h1>' );
 	}
 	
