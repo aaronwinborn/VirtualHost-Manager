@@ -119,7 +119,7 @@ function new_vhost( $nome = NULL ) {
 	 */
 	$vhConf = "<VirtualHost *:" . APACHE_PORT . ">";
 	$vhConf .= "\n\tDocumentRoot " . $vhPath;
-	$vhConf .= "\n\tServerName localhost." . $nome;
+	$vhConf .= "\n\tServerName " . $nome;
 	$vhConf .= "\n</VirtualHost>"; 
 		
 	/*
@@ -170,7 +170,7 @@ function new_vhost( $nome = NULL ) {
 	$feedback .= "|           Dados do Virtual Host               |\n";
 	$feedback .= "+-----------------------------------------------+\n";
 	$feedback .= " DocumentRoot: $vhPath\n";
-	$feedback .= "          URL: http://localhost.$nome\n";
+	$feedback .= "          URL: http://$nome\n";
 	$feedback .= "+------------------------------------------+\n\n";
 }
 
@@ -215,7 +215,7 @@ function hosts_configuration( &$hConf, $hTitulo, $nome ) {
 	 * Cria o dominio
 	 */
 	$hConf .= "\n\n## " . $hTitulo . " ##\n";
-	$hConf .= "127.0.0.1	localhost." . $nome;
+	$hConf .= "127.0.0.1         www." . $nome;
 }
 
 /**
