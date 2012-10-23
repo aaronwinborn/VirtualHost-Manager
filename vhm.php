@@ -72,6 +72,9 @@ switch ($argv[1]) {
 	/*
 	 * Cria o vhost
 	 */
+	case 'a':
+	case 'add':
+	case 'n':
 	case 'nw':
 	case 'new':	
 		new_vhost($argv[2]);
@@ -80,6 +83,10 @@ switch ($argv[1]) {
 	/*
 	 * Deleta o vhost
 	 */
+	case 'r':
+	case 'rm':
+	case 'remove':
+	case 'd':
 	case 'del':
 	case 'delete':
 		delete_vhost($argv[2]);
@@ -88,6 +95,7 @@ switch ($argv[1]) {
 	/*
 	 * Restarta o Apache
 	 */
+	case 'u':
 	case 'up':
 		restart_apache();
 	break;
